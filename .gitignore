@@ -1,0 +1,14 @@
+packages/
+*/obj/
+*/bin/
+*/csx/
+*/rcf/
+*.suo
+*.user
+/.vs/config
+/Backup
+/UpgradeLog.htm
+*.log
+.vs
+*/Properties/PublishProfiles
+*/Files/**

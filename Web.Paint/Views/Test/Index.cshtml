@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1 id="qunit-header">Web.Paint QUnit Test Environment</h1>
+<h2 id="qunit-banner"></h2>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+
+<div hidden>
+    <div class="paint-tools">
+        <a class="tool-curve" href="javascript:void(0);" title="Free line">
+            <img src="~/Content/icons/chart-line-variant.svg" />
+        </a>
+        <a class="tool-line" href="javascript:void(0);" title="Line">
+            <img src="~/Content/icons/vector-line.svg" />
+        </a>
+        <a class="tool-arrow" href="javascript:void(0);">
+            <img src="~/Content/icons/arrow-top-right.svg" title="Arrow" />
+        </a>
+        <a class="tool-circle" href="javascript:void(0);" title="Circle">
+            <img src="~/Content/icons/circle.svg" />
+        </a>
+        <a class="tool-square" href="javascript:void(0);" title="Rectangle">
+            <img src="~/Content/icons/square.svg" />
+        </a>
+        <a class="tool-text" href="javascript:void(0);" title="Text">
+            <img src="~/Content/icons/format-color-text.svg" />
+        </a>
+        <a class="tool-eraser" href="javascript:void(0);" title="Eraser">
+            <img src="~/Content/icons/eraser.svg" />
+        </a>
+    </div>
+
+    <div class="paint-thick">
+        <input class="thick-slider" type="text"/>
+    </div>
+    <div class="paint-fill-color">
+        <input type="text" class="fill-color" style="display: none"/>
+        <span class="input-group-addon selected-color">
+            @*<img src="~/Content/icons/format-color-fill.svg" />*@
+            <i style="background-color: #000;"></i>
+        </span>
+    </div>
+    
+    <div class="row">
+        <div class="span12">
+            <canvas id="main-canvas" class="canvas-element"></canvas>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{
+        String appName = "Web Paint Tests";
+    }
+
+    <title>@ViewBag.Title - @appName</title>
+
+    @Styles.Render("~/Content/qunit.css")
+    @* QUnit js *@
+    @Scripts.Render("~/Scripts/qunit.js")
+    @* Code for testing *@
+    @Scripts.Render("~/bundles/tested-code")
+    @Scripts.Render("~/bundles/tests")
+    @* Tests *@
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

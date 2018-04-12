@@ -1,0 +1,228 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.row {
+    margin: 15px;
+}
+
+.canvas-element {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .canvas-container {
+        margin: 0 auto;
+    }
+    .navbar-nav a {
+        width: 100% !important;
+        text-align: center;
+    }
+    .navbar-toggle {
+        right: 5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .span4 {
+        width: 270px !important;
+    }
+    .navbar-brand {
+        margin-left: 0 !important;
+    }
+    .fill-color-span {
+        margin-top: 5%;
+        width: auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .navbar-fixed-top, .navbar-fixed-bottom {
+        position: fixed !important;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+    .span4 {
+        width: 340px !important;
+        float: left !important;
+    }
+    .span1 {
+        width: 70px !important;
+        float: left !important;
+    }
+}
+
+.paint-tools {
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+}
+
+.paint-tools a {
+    margin-right: 15px;
+    background-color: initial;
+}
+
+.paint-tools a.tool-selected {
+    background-color: orange; 
+}
+
+.paint-fill-color i {
+    background-color: #000;
+    float: left !important;
+    width: 30px !important;
+    height: 30px !important;
+    border: 1px solid #000;
+}
+
+.paint-fill-color .selected-color {
+    background: none;
+    border: none;
+}
+
+.colorpicker-2x .colorpicker-saturation {
+    width: 200px;
+    height: 200px;
+}
+.colorpicker-2x .colorpicker-hue,
+.colorpicker-2x .colorpicker-alpha {
+    width: 30px;
+    height: 200px;
+}
+.colorpicker-2x .colorpicker-color,
+.colorpicker-2x .colorpicker-color div{
+    height: 30px;
+}
+
+/* Jquery Gritter */
+
+.gritter-item-wrapper, #gritter-notice-wrapper {
+background-image:none!important;
+box-shadow:0 2px 10px rgba(50,50,50,0.5);
+}
+
+.gritter-item-wrapper {
+    margin: 0 !important;
+}
+
+.gritter-item {
+    background: none !important;
+}
+
+#gritter-notice-wrapper .gritter-top ,#gritter-notice-wrapper .gritter-bottom {
+    background: none !important
+}
+
+.gritter-item-wrapper.gritter-info {
+background:rgba(49,81,133,0.92);
+}
+
+.gritter-item-wrapper.gritter-error {
+background:rgba(153,40,18,0.92);
+}
+
+.gritter-item-wrapper.gritter-success {
+background:rgba(89,131,75,0.92);
+}
+
+.gritter-item-wrapper.gritter-warning {
+background:rgba(190,112,31,0.92);
+}
+
+.gritter-item-wrapper.gritter-light {
+background:rgba(245,245,245,0.95);
+border:1px solid #BBB;
+}
+
+.gritter-item-wrapper.gritter-light.gritter-info {
+background:rgba(232,242,255,0.95);
+}
+
+.gritter-item-wrapper.gritter-light.gritter-info .gritter-item {
+color:#4a577d;
+}
+
+.gritter-item-wrapper.gritter-light.gritter-error {
+background:rgba(255,235,235,0.95);
+}
+
+.gritter-item-wrapper.gritter-light.gritter-error .gritter-item {
+color:#894a38;
+}
+
+.gritter-item-wrapper.gritter-light.gritter-success {
+background:rgba(239,250,227,0.95);
+}
+
+.gritter-item-wrapper.gritter-light.gritter-success .gritter-item {
+color:#416131;
+}
+
+.gritter-item-wrapper.gritter-light.gritter-warning {
+background:rgba(252,248,227,0.95);
+}
+
+.gritter-item-wrapper.gritter-light.gritter-warning .gritter-item {
+color:#946446;
+}
+
+.gritter-close {
+left:auto;
+right:3px;
+background-image: none;
+width:18px;
+height:18px;
+line-height:17px;
+text-align:center;
+border:2px solid transparent;
+border-radius:16px;
+color:#e17b67;
+}
+
+.gritter-close:before {
+font-family:FontAwesome;
+font-size:16px;
+content:"\f00d";
+}
+
+.gritter-info .gritter-close {
+color:orange;
+}
+
+.gritter-error .gritter-close,.gritter-success .gritter-close,.gritter-warning .gritter-close {
+color:#ffea07;
+}
+
+.gritter-light .gritter-item,.gritter-light .gritter-bottom,.gritter-light .gritter-top,.gritter-light .gritter-close {
+background-image:none;
+color:#444;
+}
+
+.gritter-light .gritter-close:hover {
+color:#8a3104!important;
+}
+
+.gritter-center {
+position:fixed;
+left:33%;
+right:33%;
+top:33%;
+}

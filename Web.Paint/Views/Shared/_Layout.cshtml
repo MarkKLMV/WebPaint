@@ -1,0 +1,64 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    @{
+        String appName = "Web Paint";
+    }
+    
+    <title>@ViewBag.Title - @appName</title>
+    
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Force the following images load from server -->
+    <img src="~/Content/img/hue.png" hidden />
+    <img src="~/Content/img/alpha.png" hidden />
+    <img src="~/Content/img/saturation.png" hidden />
+    <img src="~/Content/icons/right_arrow_forward_sign_256.svg" hidden />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink(appName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse" id="nav-collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(appName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @appName</p>
+        </footer>
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/fabricjs")
+    @Scripts.Render("~/bundles/notice")
+    @Scripts.Render("~/bundles/paint")
+    @Scripts.Render("~/bundles/signalR")
+    @Scripts.Render("/signalr/hubs")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
